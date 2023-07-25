@@ -25,12 +25,12 @@ router.put("/users/:id", (req, res) => {
   }
 });
 
-router.get("/users", (req, res) => {
+router.get("/users", (req, res ,next) => {
   try {
     const users = showUsers();
-    res.json(users);
+    res.render("users",{users});
   } catch (err) {
-    res.status(500).send(err.message);
+    next(err);
   }
 });
 

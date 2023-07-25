@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap"
+        rel="stylesheet">
+    <title>User List</title>
+    <style>
+        table {
+            
+            overflow-x: auto;
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            font-family: "Clash Display";
+        }
+
+        th {
+            font-size: 1.5rem;
+            font-weight: 600;
+            border: 1px solid #dddddd;
+            color: #248f59;
+            text-align: left;
+            padding: 8px;
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1
+        style="display: flex; font-family: 'Clash Display', sans-serif; font-weight: 500; justify-content: center; align-items: center; color: #248f59;">
+        Users List
+    </h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <% users.forEach(user=> { %>
+            <tr>
+                <td>
+                    <%= user.id %>
+                </td>
+                <td>
+                    <%= user.name %>
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+
+</body>
+
+</html>
