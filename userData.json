@@ -1,57 +1,132 @@
 [
   {
     "id": 1,
+    "gender": "male",
     "name": "rumi",
-    "email": "rumi@gmail.com"
+    "phoneNo": 3241064796,
+    "isAdmin": "true",
+    "email": "rumi@gmail.com",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743"
   },
   {
     "id": 2,
-    "name": "faris",
-    "email": "faris@gmail.com"
+    "phoneNo": 3241064796,
+    "gender": "male",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false,
+    "name": "Faris",
+    "email": "Faris@gmail.com"
   },
   {
     "id": 3,
-    "name": "talha",
-    "email": "talha23@gmail.com"
-  },
-  {
-    "id": 4,
-    "name": "Kami",
+    "phoneNo": 3241064796,
+    "gender": "male",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false,
+    "name": "Kamai",
     "email": "Kami@gmail.com"
   },
   {
+    "id": 4,
+    "phoneNo": 3241064796,
+    "gender": "female",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": "true",
+    "name": "Fizza",
+    "email": "Fizza@gmail.com"
+  },
+  {
     "id": 5,
-    "name": "shams",
-    "email": "shams@gmail.com"
+    "phoneNo": 3241064796,
+    "gender": "female",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false,
+    "name": "Ammar",
+    "email": "Ammar@gmail.com"
   },
   {
     "id": 6,
-    "name": "sherlock",
-    "email": "Sherlock@gmail.com"
+    "name": "Ammar",
+    "email": "Ammar@gmail.com",
+    "phoneNo": 3241064796,
+    "gender": "male",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false
   },
   {
     "id": 7,
-    "name": "shams",
-    "email": "shams@gmail.com"
+    "name": "Shehroz",
+    "email": "Shehroz@gmail.com",
+    "phoneNo": 3241064796,
+    "gender": "male",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": "true"
   },
   {
     "id": 8,
-    "name": "rumi",
-    "email": "rumi@gmail.com"
+    "name": "Emma",
+    "email": "Emma@gmail.com",
+    "phoneNo": 3241064796,
+    "gender": "female",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false
+  },
+  {
+    "id": 9,
+    "name": "Saira",
+    "email": "Saira@gmail.com",
+    "gender": "female",
+    "phoneNo": 3241064796,
+    "isAdmin": false,
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743"
   },
   {
     "id": 10,
-    "name": "ALI",
-    "email": "ali@gmail.com"
+    "name": "Anny",
+    "email": "Anny@gmail.com",
+    "phoneNo": 3241064796,
+    "gender": "female",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false
   },
   {
     "id": 11,
     "name": "Meeri",
-    "email": "Meeri@gmail.com"
+    "email": "Meeri@gmail.com",
+    "phoneNo": 3241064796,
+    "gender": "male",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false
+  },
+  {
+    "id": 12,
+    "name": "Jenny",
+    "email": "Jeeny@gmail.com",
+    "phoneNo": 3241064796,
+    "gender": "female",
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743",
+    "isAdmin": false
   },
   {
     "id": 13,
-    "name": "ammar",
-    "email": "ammar23@gmail.com"
+    "name": "John",
+    "email": "John@gmail.com",
+    "gender": "male",
+    "phoneNo": 3241064796,
+    "isAdmin": false,
+    "doB": "2023-07-26T00:00:00.000Z",
+    "cNIC": "3401451719743"
   }
 ]

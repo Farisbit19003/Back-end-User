@@ -1,5 +1,5 @@
 const express = require("express");
-const routes = require("./routes/user");
+const routes = require("./routes/user.routes");
 
 const app = express();
 const port = 3000;
@@ -33,7 +33,7 @@ app.use((err, req, res, next) => {
       .status(500)
       .json({ error: "Something went wrong. Please try again later." });
   }
-  return  res.status(404).render("404")
+
 });
 
 // Route for handling "Not Found" (404) cases

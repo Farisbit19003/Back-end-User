@@ -2,18 +2,25 @@
 <html>
 
 <head>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap"
-        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet">
     <title>User List</title>
     <style>
-        table {
+        body {
+            overflow-x: hidden;
+        }
+
+        .table-container {
             overflow-x: auto;
             width: 80%;
-            border-collapse: collapse;
             margin: 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
         td {
             cursor: pointer;
             border: 1px solid #dddddd;
@@ -23,6 +30,7 @@
         }
 
         th {
+            white-space: nowrap;
             font-size: 1.5rem;
             font-weight: 600;
             border: 1px solid #dddddd;
@@ -35,12 +43,13 @@
         tr:hover {
             background-color: #f2f2f2;
         }
-        h1{
+
+        h1 {
             display: flex;
-            font-family: 'Clash Display', sans-serif; 
-            font-weight: 500; 
-            justify-content: center; 
-            align-items: center; 
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 500;
+            justify-content: center;
+            align-items: center;
             color: #248f59;
         }
     </style>
@@ -49,13 +58,19 @@
 <body>
     <h1>Users List</h1>
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        <% users.forEach(user=> { %>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No#</th>
+                <th>Gender</th>
+                <th>DoB</th>
+                <th>CNIC</th>
+                <th>IsAdmin</th>
+            </tr>
+            <% users.forEach(user=> { %>
             <tr>
                 <td>
                     <%= user.id %>.
@@ -66,9 +81,25 @@
                 <td>
                     <%= user.email %>
                 </td>
+                <td>
+                    <%= user.phoneNo %>
+                </td>
+                <td>
+                    <%= user.gender %>
+                </td>
+                <td>
+                    <%= new Date(user.doB).toLocaleDateString()  %>
+                </td>
+                <td>
+                    <%= user.cNIC %>
+                </td>
+                <td>
+                    <%= user.isAdmin %>
+                </td>
             </tr>
             <% }); %>
-    </table>
+        </table>
+    </div>
 
 </body>
 
