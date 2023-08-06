@@ -1,4 +1,4 @@
-import Patient from "../schemas/patient.schema.js";
+import Patient from "../schemas/patient.schema";
 
 // Controller for creating a new patient
 export const createPatient = async (req, res) => {

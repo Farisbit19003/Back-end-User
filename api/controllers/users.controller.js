@@ -1,5 +1,5 @@
 
-import User from "../../schemas/user.schema";
+import User from "../schemas/user.schema";
 
 
 // Controller for creating a new doctor
