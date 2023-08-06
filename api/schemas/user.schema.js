@@ -37,6 +37,11 @@ const userSchema = new Schema(
       type: String,
       enum: ["Male", "Female"],
     },
+    status: {
+      type: String,
+      required: true,
+      enum: ["ACTIVE", "INACTIVE"],
+    },
     systemRoles: [
       {
         role: {

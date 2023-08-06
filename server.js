@@ -1,6 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import fs from "fs";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import cryptoRandomString from "crypto-random-string";
 import dotenv from "dotenv";
 
 dotenv.config();
