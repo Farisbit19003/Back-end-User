@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const { Schema } = mongoose;
 
-const docSchema = new Schema(
+const userSchema = new Schema(
   {
     firstName: {
       type: String,
@@ -41,7 +41,7 @@ const docSchema = new Schema(
       {
         role: {
           type: String,
-          enum: ["DOCTOR", "SURGEON", "CLINICAL STAFF","PSYCHATRIST"],
+          enum: ["DOCTOR", "CLINICAL STAFF","ADMIN"],
           required: true,
         },
         department: {
@@ -60,5 +60,5 @@ const docSchema = new Schema(
   { timestamps: true }
 );
 
-const Doctor = mongoose.model("Doctor", docSchema);
-export default Doctor;
+const User = mongoose.model("User", userSchema);
+export default User;
