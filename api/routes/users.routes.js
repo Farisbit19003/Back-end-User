@@ -3,17 +3,25 @@ import {
   createUser,
   getAllUsers,
   getUserById,
+  loginUser, 
+  logoutUser, 
 } from "../controllers/users.controller";
 
 const router = Router();
 
-// Create a new doctor
+// Create a new user
 router.post("/users", createUser);
 
-// Get all doctors
+// User login route
+router.post("/login", loginUser);
+
+// User logout route
+router.post("/logout", logoutUser);
+
+// Get all user
 router.get("/users", getAllUsers);
 
-// Get a single doctor by ID
+// Get a single user by ID
 router.get("/user/:id", getUserById);
 
 export default router;

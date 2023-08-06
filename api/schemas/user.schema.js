@@ -33,6 +33,15 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    jwtSecret: {
+      type: String,
+      required: true,
+      default: generateJwtSecret(),
+    },
+    isLoggedOut: {
+      type: Boolean,
+      default: false,
+    },
     gender: {
       type: String,
       enum: ["Male", "Female"],
@@ -46,12 +55,18 @@ const userSchema = new Schema(
       {
         role: {
           type: String,
-          enum: ["DOCTOR", "CLINICAL STAFF","ADMIN"],
+          enum: ["DOCTOR", "CLINICAL STAFF", "ADMIN"],
           required: true,
         },
         department: {
           type: String,
-          enum: ["Psychology", "Emergency Medicine", "Radiology", "Neurology","ADMIN"],
+          enum: [
+            "Psychology",
+            "Emergency Medicine",
+            "Radiology",
+            "Neurology",
+            "ADMIN",
+          ],
           required: true,
         },
         shifts: {
