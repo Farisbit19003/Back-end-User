@@ -46,7 +46,7 @@ const userSchema = new Schema(
         },
         department: {
           type: String,
-          enum: ["Psychology", "Emergency Medicine", "Radiology", "Neurology"],
+          enum: ["Psychology", "Emergency Medicine", "Radiology", "Neurology","ADMIN"],
           required: true,
         },
         shifts: {
