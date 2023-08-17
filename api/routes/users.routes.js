@@ -1,27 +1,35 @@
 import { Router } from "express";
 import {
   createUser,
+  deleteUserById,
   getAllUsers,
   getUserById,
-  loginUser, 
-  logoutUser, 
+  loginUser,
+  logoutUser,
+  updateUserById,
 } from "../controllers/users.controller";
 
-const router = Router();
+const userRouter = Router();
 
 // Create a new user
-router.post("/users", createUser);
+userRouter.post("/users", createUser);
 
 // User login route
-router.post("/login", loginUser);
+userRouter.post("/login", loginUser);
 
 // User logout route
-router.post("/logout", logoutUser);
+userRouter.post("/logout", logoutUser);
 
 // Get all user
-router.get("/users", getAllUsers);
+userRouter.get("/users", getAllUsers);
 
 // Get a single user by ID
-router.get("/user/:id", getUserById);
+userRouter.get("/user/:id", getUserById);
 
-export default router;
+// Delete a single user by ID
+userRouter.delete("/users/:id", deleteUserById);
+
+// Update a single user by ID
+userRouter.put("/users/:id", updateUserById);
+
+export default userRouter;

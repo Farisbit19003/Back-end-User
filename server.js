@@ -20,11 +20,8 @@ mongoose.connect(process.env.DATABASE, {
 app.use(express.json());
 
 // Dynamically load all route files using fs and map
-fs.readdirSync("./api/routes").map((r) => {
-  if (r.endsWith(".js")) {
-    const route = require(`./api/routes/${r}`);
-    app.use("/api", route.default);
-  }
+fs.readdirSync("./api/routes").map((file) => {
+  app.use("/api", require(`./api/routes/${file}`).default);
 });
 
 const port = process.env.PORT || 3000;

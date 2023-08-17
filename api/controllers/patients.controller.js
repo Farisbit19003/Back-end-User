@@ -45,3 +45,33 @@ export const getPatientById = async (req, res) => {
     return res.status(500).json({ error: "Could not retrieve the patient." });
   }
 };
+
+// Controller for updating a patient by ID
+export const updatePatientById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const updatedPatient = await Patient.findByIdAndUpdate(id, req.body, { new: true });
+    if (!updatedPatient) {
+      return res.status(404).json({ error: "Patient not found." });
+    }
+    return res.status(200).json(updatedPatient);
+  } catch (error) {
+    return res.status(500).json({ error: "Could not update the patient." });
+  }
+}
+
+// Controller for deleting a patient by ID
+export const deletePatientById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const deletedPatient = await Patient.findByIdAndDelete(id);
+    if (!deletedPatient) {
+      return res.status(404).json({ error: "Patient not found." });
+    }
+    return res.status(200).json({ message: "Patient deleted successfully." });
+  } catch (error) {
+    return res.status(500).json({ error: "Could not delete the patient." });
+  }
+};
+
+

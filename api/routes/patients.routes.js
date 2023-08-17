@@ -1,19 +1,27 @@
 import { Router } from "express";
 import {
   createPatient,
+  deletePatientById,
   getAllPatients,
   getPatientById,
+  updatePatientById,
 } from "../controllers/patients.controller";
 
-const router = Router();
+const patientRouter = Router();
 
 // Create a new patient
-router.post("/patients", createPatient);
+patientRouter.post("/patients", createPatient);
 
 // Get all patients
-router.get("/patients", getAllPatients);
+patientRouter.get("/patients", getAllPatients);
 
 // Get a single patient by ID
-router.get("/patients/:id", getPatientById);
+patientRouter.get("/patients/:id", getPatientById);
 
-export default router;
+// Update a single patient
+patientRouter.put("/patients/:id", updatePatientById);
+
+// Delete a single patient
+patientRouter.delete("/patients/:id", deletePatientById);
+
+export default patientRouter;

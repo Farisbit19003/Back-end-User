@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { generateJwtSecret } from "../middleware/jwt.middleware";
 const { Schema } = mongoose;
 
 const userSchema = new Schema(
@@ -62,6 +63,7 @@ const userSchema = new Schema(
           type: String,
           enum: [
             "Psychology",
+            "Surgery",
             "Emergency Medicine",
             "Radiology",
             "Neurology",

@@ -45,7 +45,7 @@ const patientSchema = new Schema(
       required: true,
     },
     allergies: {
-      type: [String], // An array of strings for multiple allergies
+      type: [String], 
       default: [],
     },
     bloodType: {
